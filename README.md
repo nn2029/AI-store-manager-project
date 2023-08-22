@@ -21,18 +21,19 @@ Odoo Database: For product details storage and retrieval.
 xmlrpc.client: For XML-RPC communication with Odoo.
 DeepSort: For tracking and counting multiple objects.
 History Buffer: For maintaining a record of recent detections to enhance accuracy.
-Product Status
-The robot uses computer vision techniques, YOLOv5, Deep MOT, and a history buffer to detect and count products on shelves:
 
+Product Status
+The robot uses computer vision techniques, YOLOv5, Deep MOT, and 
+a history buffer to detect and count products on shelves:
 Product Detection: Employs trained models to detect products in its camera frame.
 Deep MOT: A multi-object tracking method that prevents overcounting.
 History Buffer: Provides a record of recent detections to enhance accuracy.
 Debouncing: To ensure genuine product detection, it counts a product only when detected in multiple consecutive frames, 
 filtering out momentary false positives.
 Logging to Database: Detected products, their counts, and locations are recorded in the Odoo database.
+
 Product Finder
 Upon a customer's request:
-
 The robot fetches product locations from the Odoo database.
 Utilizes ROS services to calculate the shortest path.
 Navigates to the product location.
