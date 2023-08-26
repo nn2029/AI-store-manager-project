@@ -57,8 +57,3 @@ Launch the product_status_location.py node for product detection and logging.
 Launch the product_finder.py node for product location navigation.
 Load parameters from a yaml configuration file.
 
-Conclusion
-This robot offers a comprehensive solution for inventory management and customer service, 
-ensuring efficiency and a better shopping experience. By reducing stockouts and overstocking incidents, 
-improving product detection, and enhancing shelf status analysis, 
-the AI-powered robotic system brings significant improvements to retail operations and customer experience.
