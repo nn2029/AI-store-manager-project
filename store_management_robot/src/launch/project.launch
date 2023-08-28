@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Launch the rosbot_bringup package -->
+  <include file="$(find rosbot_bringup)/launch/rosbot_rviz_amcl.launch" />
+  
+  <!-- Launch the yolov5_ros package -->
+  <include file="$(find yolov5_ros)/launch/yolov5.launch" />
+
+  <!-- Launch the product_status_location.py node -->
+  <node pkg="store_management_robot" type="product_status_location.py" name="product_status" />
+  
+  <!-- Launch the product_finder.py node -->
+  <node pkg="store_management_robot" type="product_finder.py" name="product_finder" />
+
+  <!-- Load the parameters from the yaml file -->
+  <rosparam file="$(find store_management_robot)/src/config/product_status.yaml" command="load" />
+  
+
+</launch>

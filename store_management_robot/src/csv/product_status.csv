@@ -1,0 +1,51 @@
+product_id,shelf_id,status,product_count
+Always,2,In Stock,27
+Johnsons Moisture Wash,2,In Stock,5
+Nivea creme tube,2,Low Stock,2
+Johnsons Hair Conditioner,2,Low Stock,2
+Johnsons Baby Cream,2,Low Stock,3
+Johnsons Baby oil,2,In Stock,6
+Nivea body wash white jasmine,2,Low Stock,1
+Pampers wipes,2,In Stock,5
+Pantene conditioner,2,Low Stock,1
+NAN baby milk,2,Low Stock,1
+Herbal Shamppo,2,Low Stock,1
+Johnsons Baby Powder,2,Low Stock,2
+Johnsons Hair Conditioner,1,In Stock,24
+Nivea creme tube,1,In Stock,15
+Nivea creme,1,In Stock,17
+Johnsons Baby Shampoo,1,In Stock,52
+Always,1,In Stock,48
+Pampers wipes,1,In Stock,25
+LOreal Glow enhancer,1,Low Stock,4
+Johnsons Moisture Wash,1,In Stock,16
+Nivea deodorant,1,In Stock,6
+Nivea spray,1,In Stock,9
+NIDO milk,1,Low Stock,3
+Pampers,1,Low Stock,3
+Nivea body wash,1,In Stock,7
+Nivea body wash white jasmine,1,In Stock,7
+Johnsons Baby Cream,1,Low Stock,3
+Johnsons Baby oil,1,Low Stock,3
+Johnsons Baby Powder,1,Low Stock,2
+Lux Bar soap,5,In Stock,27
+Nivea spray,5,In Stock,16
+NIDO milk,5,In Stock,61
+Nivea creme tube,5,In Stock,15
+Herbal Shamppo,5,In Stock,61
+Johnsons Baby oil,5,In Stock,64
+Pampers,5,In Stock,31
+Johnsons Baby Powder,5,In Stock,29
+Nivea deodorant,5,In Stock,17
+Always,5,In Stock,40
+Johnsons Hair Conditioner,5,In Stock,37
+Johnsons Baby Cream,5,In Stock,36
+Johnsons Moisture Wash,5,In Stock,36
+Nivea body wash white jasmine,5,In Stock,32
+Nivea body wash,5,In Stock,27
+Pampers wipes,5,In Stock,48
+Pantene conditioner,5,In Stock,6
+LOreal Glowtion,5,Low Stock,4
+Nivea creme,5,Low Stock,4
+Johnsons Baby Shampoo,5,In Stock,12
+NAN baby milk,5,Low Stock,1

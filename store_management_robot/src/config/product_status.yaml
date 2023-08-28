@@ -1,0 +1,14 @@
+shelves:
+  "1": {x: 3.4, y: 2.2, z: 0.0}
+  "2": {x: -0.96, y: 3.82, z: 0.0}
+  "3": {x: -2.96, y: 1.14, z: 0.0}
+  "4": {x: 1.48, y: -4.2, z: 0.0}
+  "5": {x: 5.210, y: -0.468, z: 0.0}
+thresholds:
+  Out of Stock: 0
+  Very Low Stock: 2
+  Low Stock: 5
+  In Stock: 120
+map_file: /maps/map.yaml
+csv_path: /home/nass/catkin_ws/src/store_management_robot/src/csv
+
