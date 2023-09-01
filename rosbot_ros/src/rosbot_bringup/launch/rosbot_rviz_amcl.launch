@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find rosbot_bringup)/launch/rosbot_rviz.launch"></include>
+
+  <include file="$(find rosbot_navigation)/launch/amcl_demo.launch"></include>
+  
+  <!-- Explore Lite -->
+  <include file="$(find explore_lite)/launch/explore.launch" />
+
+</launch>

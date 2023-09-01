@@ -1,0 +1,12 @@
+shelves:
+  "1": {x: 3.790, y: 2.56, z: 0.0}
+  "2": {x: -1.0, y: 4.82, z: 0.0}
+  "3": {x: -3.56, y: 1.14, z: 0.0}
+  "4": {x: 1.48, y: -3.5, z: 0.0}
+  "5": {x: 5.210, y: -0.468, z: 0.0}
+thresholds:
+  Out of Stock: 0
+  Low Stock: 5
+  In Stock: 10
+time_threshold: 120
+
