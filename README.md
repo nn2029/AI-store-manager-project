@@ -11,13 +11,12 @@ Product Finder: Upon customer request, the robot listens to product queries,
 retrieves product locations from the database, calculates the shortest path, a
 nd guides the customer to the product.
 
-[Watch the Robot in Action!]
-https://drive.google.com/file/d/1yZsVQUA04RhOxXDS4pvHyA7qTWRHybV8/view?usp=share_link
-
 Dependencies
 
 ROS (Robot Operating System)
-ROS Packages: std_msgs, geometry_msgs, nav_msgs, actionlib_msgs
+rosbot_ros (Modified version from Husarion)
+m-explore
+sort
 YOLOv5 for ROS: For computer vision-based product detection.
 Pandas: To read from and write to CSV files.
 Odoo Database: For product details storage and retrieval.
@@ -52,6 +51,7 @@ An additional script automates the updating of the Odoo database with product st
 Robot Navigation and Launch
 The robot uses the store_management_robot ROS package, which includes two main Python scripts: 
 product_status_location.py and product_finder.py, along with the additional scripts mentioned above.
+
 The launch file for this package is set up as follows:
 
 Launch the rosbot_bringup package for robot setup.
@@ -59,5 +59,11 @@ Launch the yolov5_ros package for object detection.
 Launch the product_status_location.py node for product detection and logging.
 Launch the product_finder.py node for product location navigation.
 Load parameters from a yaml configuration file.
+
+
+
+Robot Demonstration Video
+[Watch the Robot in Action!]
+https://drive.google.com/file/d/1yZsVQUA04RhOxXDS4pvHyA7qTWRHybV8/view?usp=share_link
 
 For access to the Gazebo shelf models used, check contact me, Thank You.
