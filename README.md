@@ -11,6 +11,8 @@ Product Finder: Upon customer request, the robot listens to product queries,
 retrieves product locations from the database, calculates the shortest path, a
 nd guides the customer to the product.
 
+[Watch the Robot in Action!]
+
 Dependencies
 
 ROS (Robot Operating System)
@@ -57,3 +59,4 @@ Launch the product_status_location.py node for product detection and logging.
 Launch the product_finder.py node for product location navigation.
 Load parameters from a yaml configuration file.
 
+For access to the Gazebo shelf models used, check [here] https://drive.google.com/file/d/16HRzeyr-4MIRUCLTWTEuoeAlib8JwsYL/view?usp=share_link.
