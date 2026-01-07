@@ -1,69 +1,107 @@
-# AI-store-manager-project
-Introduction
-The AI-Powered Retail Robot is designed to assist store staff and customers, 
-serving as a tool for inventory management and customer service. 
-The robot has two primary functionalities:
+Autonomous Retail Intelligence Robot (ARIR)
 
-Product Status: The robot patrols store aisles, uses computer vision to detect products on shelves, 
-and logs their counts and locations in an Odoo database, 
-offering real-time inventory insights to store staff.
-Product Finder: Upon customer request, the robot listens to product queries, 
-retrieves product locations from the database, calculates the shortest path, a
-nd guides the customer to the product.
+AI-Driven Inventory Management & Customer Assistance Using ROS and Computer Vision
 
-Dependencies
+Overview
 
-ROS (Robot Operating System)
-rosbot_ros (Modified version from Husarion)
-m-explore
-sort
-YOLOv5 for ROS: For computer vision-based product detection.
-Pandas: To read from and write to CSV files.
-Odoo Database: For product details storage and retrieval.
-xmlrpc.client: For XML-RPC communication with Odoo.
-DeepSort: For tracking and counting multiple objects.
-History Buffer: For maintaining a record of recent detections to enhance accuracy.
+Autonomous Retail Intelligence Robot (ARIR) is a research-grade AI-enabled robotic system developed as part of an MSc Robotics dissertation. The system autonomously navigates a retail environment, detects and tracks products on shelves using deep learning–based computer vision, updates inventory records in real time via ERP integration, and assists customers by guiding them to product locations on request.
 
-Product Status
-The robot uses computer vision techniques, YOLOv5, Deep MOT, and 
-a history buffer to detect and count products on shelves:
-Product Detection: Employs trained models to detect products in its camera frame.
-Deep MOT: A multi-object tracking method that prevents overcounting.
-History Buffer: Provides a record of recent detections to enhance accuracy.
-Debouncing: To ensure genuine product detection, it counts a product only when detected in multiple consecutive frames, 
-filtering out momentary false positives.
-Logging to Database: Detected products, their counts, and locations are recorded in the Odoo database.
+The project focuses on system-level robotics engineering, combining perception, navigation, decision-making, and backend integration into a modular and scalable architecture suitable for real-world retail automation.
 
-Product Finder
-Upon a customer's request:
-The robot fetches product locations from the Odoo database.
-Utilizes ROS services to calculate the shortest path.
-Navigates to the product location.
-Additional Scripts
+Key Capabilities
 
-Image Saver (image_saver.py): This script saves images captured by the robot's camera,
-which can be used to create a dataset for model training.
-Product Debounce (productdebounce.py): The ProductDebounce class ensures that a product detection is consistent over multiple frames. 
-This prevents erroneous triggers and confirms a product's presence before counting.
-Database Automation
-An additional script automates the updating of the Odoo database with product statuses, eliminating manual data entries.
+Autonomous navigation and SLAM using ROS
 
-Robot Navigation and Launch
-The robot uses the store_management_robot ROS package, which includes two main Python scripts: 
-product_status_location.py and product_finder.py, along with the additional scripts mentioned above.
+Real-time product detection with YOLOv4-Tiny and YOLOv5
 
-The launch file for this package is set up as follows:
+Multi-object tracking with DeepSORT
 
-Launch the rosbot_bringup package for robot setup.
-Launch the yolov5_ros package for object detection.
-Launch the product_status_location.py node for product detection and logging.
-Launch the product_finder.py node for product location navigation.
-Load parameters from a yaml configuration file.
+Product debouncing and history buffering to prevent over-counting
 
+Real-time inventory updates via ERP (Odoo XML-RPC)
 
+Customer-initiated product search and robot-guided assistance
 
-Robot Demonstration Video
-[Watch the Robot in Action!]
-https://drive.google.com/file/d/1yZsVQUA04RhOxXDS4pvHyA7qTWRHybV8/view?usp=share_link
+Modular ROS-based architecture designed for extensibility
 
-For access to the Gazebo shelf models used, check contact me, Thank You.
+System Architecture
+
+The system is structured as loosely coupled ROS nodes to ensure robustness, fault isolation, and scalability:
+
+Perception Layer
+
+Camera input
+
+YOLO-based object detection
+
+DeepSORT multi-object tracking
+
+Product debouncing & history buffer
+
+Robotics Layer
+
+ROS Noetic middleware
+
+SLAM (gmapping)
+
+Navigation stack (move_base)
+
+Obstacle avoidance & path planning
+
+Data & Integration Layer
+
+Inventory state aggregation
+
+CSV persistence
+
+ERP integration via Odoo XML-RPC API
+
+Customer Interaction Layer
+
+Product request handling
+
+Shortest-path computation
+
+Robot-guided navigation to product location
+
+Technology Stack
+
+Languages: Python
+
+Robotics: ROS Noetic, Gazebo
+
+Computer Vision: OpenCV, YOLOv4-Tiny, YOLOv5
+
+Tracking: DeepSORT
+
+Backend / Integration: Odoo ERP (XML-RPC), Pandas
+
+Platform: ROSbot Husarion 2 Pro (simulated)
+
+OS: Linux (Ubuntu)
+
+Why This Project Matters
+
+This project goes beyond model training or simulation demos. It demonstrates:
+
+End-to-end robotics system design
+
+Real-time AI deployment constraints
+
+Robust perception in cluttered environments
+
+Practical integration with enterprise inventory systems
+
+Engineering tradeoffs between accuracy, latency, and reliability
+
+Limitations & Future Work
+
+Evaluation conducted in a simulated retail environment
+
+Limited dataset diversity
+
+Cloud-dependent model training
+
+Potential latency from perception and ERP synchronization
+
+Planned extensions include real-world deployment, dataset expansion, demand forecasting integration, and hardware-optimized inference.
