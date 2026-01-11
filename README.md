@@ -105,3 +105,45 @@ Cloud-dependent model training
 Potential latency from perception and ERP synchronization
 
 Planned extensions include real-world deployment, dataset expansion, demand forecasting integration, and hardware-optimized inference.
+
++--------------------+
+|   RGB / Depth Cam  |
++---------+----------+
+          |
+          v
++-----------------------------+
+|  Perception Node (ROS)      |
+|  - YOLOv5 Detection         |
+|  - DeepSORT Tracking        |
+|  - Product Debouncing       |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| Inventory Logic Node        |
+| - Product Status            |
+| - Location Aggregation      |
+| - CSV Persistence           |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| ERP Integration Node        |
+| - Odoo XML-RPC API          |
+| - Real-time Updates         |
++-----------------------------+
+
++-----------------------------+
+| Navigation Stack (ROS)      |
+| - SLAM (gmapping)           |
+| - Path Planning             |
+| - Obstacle Avoidance        |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| Customer Assistance Node   |
+| - Product Requests         |
+| - Shortest Path Selection  |
+| - Guided Navigation        |
++-----------------------------+
